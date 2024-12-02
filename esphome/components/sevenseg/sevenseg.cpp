@@ -214,18 +214,13 @@ void SEVENSEGComponent::display() {
   }
 }
 
-/*void SEVENSEGComponent::update() {
-  if (this->intensity_changed_) {
-    this->send_to_all_(SEVENSEG_REGISTER_INTENSITY, this->intensity_);
-    this->intensity_changed_ = false;
-  }
-  for (uint8_t i = 0; i < this->num_chips_ * 8; i++)
+void SEVENSEGComponent::update() {
+  for (uint8_t i = 0; i < this->num_digits_; i++)
     this->buffer_[i] = 0;
   if (this->writer_.has_value())
     (*this->writer_)(*this);
   this->display();
 }
-*/
 
 // blank display
 void SEVENSEGComponent::clear_display_() {
