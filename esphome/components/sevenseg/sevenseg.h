@@ -1,10 +1,9 @@
 #pragma once
 
+#include <vector>
 #include "esphome/core/component.h"
 #include "esphome/core/time.h"
 #include "esphome/core/gpio.h"
-
-//#include "esphome/components/spi/spi.h"
 
 namespace esphome {
 namespace sevenseg {
