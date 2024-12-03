@@ -278,9 +278,9 @@ void SEVENSEGComponent::set_digit_(u_int8_t digit, u_int8_t ch, bool dot) {
   this->b_pin_->digital_write(segments & 0b00100000);
   this->c_pin_->digital_write(segments & 0b00010000);
   this->d_pin_->digital_write(segments & 0b00001000);
-  this->e_pin_->digital_write(segments & 0b01000100);
-  this->f_pin_->digital_write(segments & 0b01000010);
-  this->g_pin_->digital_write(segments & 0b01000001);
+  this->e_pin_->digital_write(segments & 0b00000100);
+  this->f_pin_->digital_write(segments & 0b00000010);
+  this->g_pin_->digital_write(segments & 0b00000001);
   delay(this->hold_time_);
 }
 
